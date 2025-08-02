@@ -41,27 +41,13 @@ syntax "suggest_tactics_deepseek" str : tactic
 
 
 macro_rules
-  | `(tactic | suggest_tactics%$tac) => `(tactic | suggest_tactics%$tac "")
   | `(tactic | suggest_tactics_deepseek%$tac) => `(tactic | suggest_tactics_deepseek%$tac "")
-  | `(tactic | suggest_tactics_kimina%$tac) => `(tactic | suggest_tactics_kimina%$tac "")
 
 
 
 elab_rules : tactic
-  | `(tactic | suggest_tactics%$tac $pfx:str) => do
-    let tacticsWithScores ← suggestTactics "deepseek" pfx.getString
-    let tactics := tacticsWithScores.map (·.1)
-    let range : String.Range := { start := tac.getRange?.get!.start, stop := pfx.raw.getRange?.get!.stop }
-    let ref := Syntax.ofRange range
-    hint ref tactics True
   | `(tactic | suggest_tactics_deepseek%$tac $pfx:str) => do
     let tacticsWithScores ← suggestTactics "deepseek" pfx.getString
-    let tactics := tacticsWithScores.map (·.1)
-    let range : String.Range := { start := tac.getRange?.get!.start, stop := pfx.raw.getRange?.get!.stop }
-    let ref := Syntax.ofRange range
-    hint ref tactics True
-  | `(tactic | suggest_tactics_kimina%$tac $pfx:str) => do
-    let tacticsWithScores ← suggestTactics "kimina" pfx.getString
     let tactics := tacticsWithScores.map (·.1)
     let range : String.Range := { start := tac.getRange?.get!.start, stop := pfx.raw.getRange?.get!.stop }
     let ref := Syntax.ofRange range
