@@ -36,12 +36,8 @@ def suggestTactics (modelName : String) (targetPrefix : String) : TacticM (Array
   return suggestions
 
 
-syntax "suggest_tactics" : tactic
-syntax "suggest_tactics" str : tactic
 syntax "suggest_tactics_deepseek" : tactic
 syntax "suggest_tactics_deepseek" str : tactic
-syntax "suggest_tactics_kimina" : tactic
-syntax "suggest_tactics_kimina" str : tactic
 
 
 macro_rules
