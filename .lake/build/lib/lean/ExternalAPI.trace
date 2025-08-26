@@ -1,0 +1,25 @@
+{"log":
+ [{"message":
+   ".> LEAN_PATH=/Users/willadkisson/Desktop/external_api_hf/.lake/packages/batteries/.lake/build/lib/lean:/Users/willadkisson/Desktop/external_api_hf/.lake/build/lib/lean /Users/willadkisson/.elan/toolchains/leanprover--lean4---v4.21.0-rc3/bin/lean /Users/willadkisson/Desktop/external_api_hf/ExternalAPI.lean -R /Users/willadkisson/Desktop/external_api_hf -o /Users/willadkisson/Desktop/external_api_hf/.lake/build/lib/lean/ExternalAPI.olean -i /Users/willadkisson/Desktop/external_api_hf/.lake/build/lib/lean/ExternalAPI.ilean -c /Users/willadkisson/Desktop/external_api_hf/.lake/build/ir/ExternalAPI.c --json",
+   "level": "trace"}],
+ "inputs":
+ [["ExternalAPI:deps",
+   [["deps",
+     [["external_api/ExternalAPI:extraDep",
+       [["@external_api:extraDep", "1723"]]],
+      ["import oleans",
+       [["LeanCopilot:olean",
+         [["LeanCopilot:deps", "11339043573148848673"],
+          ["/Users/willadkisson/Desktop/external_api_hf/.lake/build/lib/lean/LeanCopilot.olean",
+           "11629619661340268150"]]]]]]],
+    ["libs",
+     [["import dynlibs", "1723"],
+      ["package external libraries", "1723"],
+      ["module dynlibs", "1723"],
+      ["module plugins", "1723"]]]]],
+  ["Lean 4.21.0, commit 6741444a63eec253a7eae7a83f1beb3de015023d",
+   "11123825329739276520"],
+  ["Module.leanArgs: #[]", "1723"],
+  ["/Users/willadkisson/Desktop/external_api_hf/ExternalAPI.lean",
+   "12089490512232750805"]],
+ "depHash": "2435678943866489398"}
